@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Imagens/Fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    height: 700px;
+    width: 1300px;
+}
+#tela-principal {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(173, 91, 37);
+    border-radius: 12px;
+    border: solid black 2px;
+
+}
+
+#Voce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+    background-color: rgb(248, 234, 172);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: solid black 2px;
+}
+
+#Status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 65%;
+    background-color: rgb(248, 234, 172);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: solid black 2px;
+    border-left: none;
+}
+.cards {
+    background-color: rgb(173, 91, 37);
+    margin: 20px;
+    padding: 5px;
+    height: 90px;
+    width: 634px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border-radius: 4px;
+    border: solid black 1px;
+}
+.cards.concluido {
+    background-color: lightgoldenrodyellow;
+}
+.cards p {
+    height: 100%;
+    width: 80%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 24px;
+    padding-left: 70px;
+    font-size: 20px;
+}
+.cards span {
+    height: 100%;
+    width: 20%;
+    font-size: 50px;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+.Entrada {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.Entrada.fechado {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+.BetaTeste {
+    width: 800px;
+    height: 700px;
+    background: linear-gradient(
+        180deg,
+        rgb(190, 110, 55),
+        rgb(140, 70, 25)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2b1a0f;
+    border-radius: 12px;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.5),
+    inset 0 0 15px rgba(255,255,255,0.1);
+}
+.Apresentacao {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.Apresentacao h2 {
+    color: rgb(248, 234, 172);
+    padding: 10px 20px;
+    font-family: 'cinzel', serif;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px black;
+    border-bottom: 2px solid rgba(248, 234, 172, 0.4);
+}
+.Apresentacao p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 90%;
+}
+
+.Apresentacao ul {
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.Apresentacao li {
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.overlay.aberto {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.avaliacao {
+    width: 800px;
+    height: 700px;
+    background: linear-gradient(
+    180deg,
+    rgb(190, 110, 55),
+    rgb(140, 70, 25)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: inset;
+}
+
+.startOverlay {
+    display: relative;
+}
+.fechar {
+    position: absolute;
+    top: 45px;
+    left: 370px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fechar object,
+.fechar img,
+.fechar svg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.icone_fechar {
+    transition: transform 0.3s ease;
+}
+.fechar:hover .icone_fechar{
+    transform: scale(1.15) rotate(95deg);
+}
+.fechar:hover .x-cor {
+    stroke: rgb(253, 95, 78);
+    transition: stroke 0.3s ease;
+}
+.avaliacao .startOverlay h2 {
+    color: rgb(248, 234, 172);
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Cinzel', serif;
+}
+
+.perguntas {
+    width: 780px;
+    height: 400px;
+    background-color: rgb(248, 234, 172);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.pergunta {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.pergunta p {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.botoes button {
+    padding: 6px 12px;
+}
+.botoes button:hover {
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+}
+.botoes button.selecionado {
+    background-color: #4caf50;
+    color: white;
+    border-color: #2e7d32;
+}
+.botoes button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.slider-nota {
+    cursor: pointer;
+}
+
+.resultado {
+    width: 780px;
+    height: 150px;
+    background-color: rgb(248, 234, 172);
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px;
+}

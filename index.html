@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throsfox</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlayEntrada" class="Entrada">
+        <div class="BetaTeste">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <div class="Apresentacao">
+                    <h2>Bem-vindo ao meu site!</h2> <h2>Versão 0.01 Beta test</h2>
+
+                    <h3>
+                        Este ainda é um projeto em desenvolvimento. A ideia é criar um diário pessoal que também sirva como
+                        uma ferramenta de autoavaliação, com o objetivo de aprimorar sua vida, tornando você mais consciente
+                        da sua semana e dos seus hábitos.<br><br>
+                        Além disso, o site busca oferecer reflexões e dicas sobre o que pode ser melhorado, especialmente
+                        nos momentos em que você estiver em dúvida sobre qual caminho seguir.<br><br>
+                        Se você deseja evoluir em alguma área da sua vida, mas ainda não possui disciplina suficiente,
+                        ou simplesmente precisa de um espaço para acompanhar seu progresso, então este site foi feito para você.
+                    </h3>
+
+                    <p>
+                        Esta ainda é uma versão de desenvolvimento, criada para verificar a coesão da lógica do sistema.
+                        Por isso, algumas funcionalidades ainda estão em construção, como:
+                    </p>
+
+                    <ul>
+                        <li>Integração com banco de dados para salvar as semanas.</li>
+                        <li>Porte para Mobile.</li>
+                        <li>Deixar mais bonito (ainda está muito feio).</li>
+                        <li>Melhora das perguntas além de customização de acordo com os hábitos das pessoas</li>
+                        <li>Novas ideias que ainda precisam ser melhor pensadas e estruturadas.</li>
+                    </ul>
+
+                    <p>
+                        Qualquer ideia, sugestão ou dúvida será muito bem-vinda. Sua opinião é extremamente valiosa para mim.<br>
+                        Entre em contato por mensagem ou, caso não possua meu número, envie um e-mail para:
+                        <strong>ThrosFox@gmail.com</strong>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="overlaySaude" class="overlay">
+        <div class="avaliacao">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <h2>Minha Saúde ao passar da semana:</h2>
+            </div>
+
+            <div id="perguntas-saude" class="perguntas">
+
+                <div class="pergunta">
+                    <p>Como foi a qualidade do meu sono na maior parte da semana?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Boa</button>
+                    <button data-valor="1">Mais ou menos</button>
+                    <button data-valor="0">Ruim</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Mantive horários minimamente organizados para dormir e acordar?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Me alimentei de forma mais consciente e sem exageros?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Pratiquei algum tipo de atividade física, mesmo que leve?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Hidratei-me adequadamente durante o dia?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="resultadoSaude" class="resultado">
+                <h3>Nessa ultima semana, minha saúde foi nota:</h3>
+                <input type="range" min="0" max="10" step="1" class="slider-nota">
+                <span id="valor-nota-saude" class="valor-nota"></span>
+                <p>O por que dessa nota:</p>
+                <textarea class="justificativa" rows="4" cols="100"></textarea>
+            </div>
+            
+            <button class="concluir" data-atributo="saude">Concluir</button>
+        </div>
+    </div>
+
+    <div id="overlayAparencia" class="overlay">
+        <div class="avaliacao">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <h2>Minha Aparência nessa ultima semana:</h2>
+            </div>
+
+            <div id="perguntas-aparencia" class="perguntas">
+
+                <div class="pergunta">
+                    <p>Cuidei do meu corpo, como meu cabelo ou minha pele?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Fiquei criticando minha própia aparencia?</p>
+                    <div class="botoes">
+                    <button data-valor="0">Sim</button>
+                    <button data-valor="1">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Fiz algo simples para melhorar minha apresentação pessoal?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Demonstrei respeito por mim mesmo através da forma como me apresentei?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Mantive uma postura boa durante o dia, evitando ficar corcunda?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="resultado-aparencia" class="resultado">
+                <h3>Minha aparência foi nota:</h3>
+                <input type="range" min="0" max="10" step="1" class="slider-nota">
+                <span id="valor-nota-aparencia" class="valor-nota">5</span>
+                <p>O por que dessa nota:</p>
+                <textarea class="justificativa" rows="4" cols="100"></textarea>
+            </div>
+
+            <button class="concluir" data-atributo="aparencia">Concluir</button>
+        </div>
+    </div>
+
+    <div id="overlayCarisma" class="overlay">
+        <div class="avaliacao">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <h2>Meu Carisma nessa semana:</h2>
+            </div>
+
+            <div id="perguntas-carisma" class="perguntas">
+
+                <div class="pergunta">
+                    <p>Fui respeitoso mesmo quando discordei?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Me senti mais confiante em interações sociais?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Evitei conflitos desnecessários?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Demonstrei empatia em conversas?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Me senti mais sociável do que na semana passada?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="resultado-carisma" class="resultado">
+                <h3>Minha nota é:</h3>
+                <input type="range" min="0" max="10" step="1" class="slider-nota">
+                <span id="valor-nota-carisma" class="valor-nota">5</span>
+                <p>O por que dessa nota:</p>
+                <textarea class="justificativa" rows="4" cols="100"></textarea>
+            </div>
+
+            <button class="concluir" data-atributo="carisma">Concluir</button>
+        </div>
+    </div>
+
+    <div id="overlayInteligencia" class="overlay">
+        <div class="avaliacao">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <h2>Minha Inteligencia durante a semana:</h2>
+            </div>
+
+            <div id="perguntas-inteligencia" class="perguntas">
+
+                <div class="pergunta">
+                    <p>Estimulei minha mente com leitura, estudo ou curiosidade?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Boa</button>
+                    <button data-valor="1">Mais ou menos</button>
+                    <button data-valor="0">Ruim</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Busquei entender melhor algo que não sabia?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Me desafiei intelectualmente em algum momento?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Usei melhor meu tempo mental sem desperdiçar com distrações?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Senti evolução na forma como raciocinei ou resolvi algo?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="resultado-inteligencia" class="resultado">
+                <h3>Minha inteligência foi um:</h3>
+                <input type="range" min="0" max="10" step="1" class="slider-nota">
+                <span id="valor-nota-inteligencia" class="valor-nota">5</span>
+                <p>O por que dessa nota:</p>
+                <textarea class="justificativa" rows="4" cols="100"></textarea>
+            </div>
+
+            <button class="concluir" data-atributo="inteligencia">Concluir</button>
+        </div>
+    </div>
+
+    <div id="overlayEspiritualidade" class="overlay">
+        <div class="avaliacao">
+
+            <div class="startOverlay">
+                <button class="fechar"><object data="fechar.svg" type="image/svg+xml"></object></button>
+                <h2>Minha Espiritualidade nessa semana:</h2>
+            </div>
+
+            <div id="perguntas-espiritualidade" class="perguntas">
+
+                <div class="pergunta">
+                    <p>Separei algum momento da semana para reflexão, oração ou silêncio?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Agi de acordo com meus valores pessoais?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Consegui me sentir mais em Paz comigo e com os outros?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Reagi com mais calma ou mais impulso diante de problemas?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Calma</button>
+                    <button data-valor="1">Impulso</button>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p>Senti gratidão em algum momento da semana?</p>
+                    <div class="botoes">
+                    <button data-valor="1">Sim</button>
+                    <button data-valor="0">Não</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="resultado-espiritualidade" class="resultado">
+                <h3>Nessa semana, minha espiritualidade merece um:</h3>
+                <input type="range" min="0" max="10" step="1" class="slider-nota">
+                <span id="valor-nota-espiritualidade" class="valor-nota">5</span>
+                <p>O por que dessa nota:</p>
+                <textarea class="justificativa" rows="4" cols="100"></textarea>
+            </div>
+
+            <button class="concluir" data-atributo="espiritualidade">Concluir</button>
+        </div>
+    </div>
+
+    <main>
+        <div id="tela-principal">
+            <div id="Voce">
+                <h1>Em Desenvolvimento</h1>
+            </div>
+            <div id="Status">
+                <button  class="cards" id="saude" data-estado="pendente"><p>saude</p><span class="resultado-card" id="nota-registro-saude">0</span></button>
+                <button  class="cards" id="aparencia" data-estado="pendente"><p>aparência</p><span class="resultado-card" id="nota-registro-aparencia">0</span></button>
+                <button  class="cards" id="carisma" data-estado="pendente"><p>carisma</p><span class="resultado-card" id="nota-registro-carisma">0</span></button>
+                <button  class="cards" id="inteligencia" data-estado="pendente"><p>inteligencia</p><span class="resultado-card" id="nota-registro-inteligencia">0</span></button>
+                <button  class="cards" id="espiritualidade" data-estado="pendente"><p>espiritualidade</p><span class="resultado-card" id="nota-registro-espiritualidade">0</span></button>
+            </div>
+        </div>    
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
